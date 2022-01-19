@@ -5,6 +5,15 @@ import co.com.sofka.score.domain.generic.Command;
 public class AddLessonCommand extends Command {
     private String courseId;
     private String name;
+    private String lessonId;
+
+    public String getLessonId() {
+        return lessonId;
+    }
+
+    public void setLessonId(String lessonId) {
+        this.lessonId = lessonId;
+    }
 
     public String getCourseId() {
         return courseId;

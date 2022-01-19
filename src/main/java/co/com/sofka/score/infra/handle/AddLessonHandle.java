@@ -18,8 +18,8 @@ public class AddLessonHandle extends UseCaseHandle {
         this.useCase = useCase;
     }
 
-    @ConsumeEvent(value = "sofkau.course.ADDLESSON")
-    void consumeBlocking(AddLessonCommand command) {
+    @ConsumeEvent(value = "sofkau.course.addLesson")
+    void consumeBlockingG(AddLessonCommand command) {
         var events = useCase.apply(command);
         process(command.getCourseId(), events);
     }
