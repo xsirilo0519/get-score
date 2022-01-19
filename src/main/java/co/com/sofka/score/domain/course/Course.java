@@ -31,7 +31,6 @@ public class Course extends AggregateRoot implements EventChange {
 
 
     public void addLesson(String id,String name){
-        this.lessons.put(id,new Lesson(id,name));
         appendChange(new LessonAdded(id,name)).apply();
     }
 
